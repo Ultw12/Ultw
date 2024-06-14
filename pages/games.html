@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <title>PC Tweaks</title>
+</head>
+
+<body>
+  <section>
+    <div class="sidebar">
+      <div class="item">
+        <div class="logo-container">
+          <img src="../assets/TWEAKS.webp" alt="" />
+          <span>Ultimate Tweaks</span>
+          <p class="app-type">beta</p>
+        </div>
+        <div class="links">
+          <a href="../index.html">
+            <img src="../assets/home.png" alt="home-page" /><span>home</span>
+          </a>
+          <a href="#" class="active">
+            <img src="../assets/game.png" alt="home-page" /><span>Games</span>
+          </a>
+          <a href="../pages/backup.html">
+            <img src="../assets/restore.png" alt="home-page" /><span>Backup</span>
+          </a>
+          <a href="../pages/rigs.html">
+            <img src="../assets/pc.png" alt="home-page" /><span>my rig</span>
+          </a>
+          <a href="#" id="openModalBtn1">
+            <img src="../assets/speed.png" alt="home-page" /><span>FPS Boost</span>
+            <span class="premium-tag">premium</span>
+          </a>
+          <a href="#" id="openModalBtn2">
+            <img src="../assets/ping.png" alt="home-page" /><span>Ping Boost</span>
+            <span class="premium-tag">premium</span>
+          </a>
+          <a href="#" id="openModalBtn3">
+            <img src="../assets/delay.png" alt="home-page" /><span>Zero Delay</span>
+            <span class="premium-tag">premium</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="discord">
+        <a onclick="openDiscord()">
+          <img src="../assets/discord.png" alt="discord" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="window-left-game">
+    <div class="title-bar">
+      <div class="title-left">
+        <a href="../index.html">
+          <img src="../assets/back.png" alt="back" />
+        </a>
+      </div>
+      <div class="title-right">
+        <button onclick="openCustomerSupport()">
+          <img src="../assets/support.png" alt="" />
+        </button>
+        <button onclick="minimizeWindow()">
+          <img src="../assets/minus.png" alt="" />
+        </button>
+        <button onclick="closeWindow()">
+          <img src="../assets/cross.png" alt="" />
+        </button>
+      </div>
+    </div>
+    <div class="spacer">
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game1.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>Fortnite</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game2.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>call of duty</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game3.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>COD Modern Warfare III</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game4.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>Roblox</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game14.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>Over Watch</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game5.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>Valorant</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game13.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>League of Legends</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game6.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>Dota</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game12.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>Minecraft</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game7.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>Call of duty warzone</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game15.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>Fall Guy</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game10.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>CS GO</span>
+      </div>
+
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game8.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>Apex legends</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game16.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>Fifa</span>
+      </div>
+
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game9.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>GTA V</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game17.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>Rocket League</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game11.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>PUBG</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game18.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>Far Cry</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game19.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>RUST</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game20.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>Rainbow Six Siege</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game21.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>Fallout</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game22.png')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>Cyberpunk 2077</span>
+      </div>
+      <div class="game-container" onmouseover="showButton()" onmouseout="hideButton()">
+        <div class="game-card" style="background-image: url('../assets/game23.jpg')">
+          <button id="hoverButton" class="hidden" onclick="gameOptimize()">
+            <img class="game-btn" src="../assets/optimize.png" alt="" />
+          </button>
+        </div>
+        <span>Genshin Impact</span>
+      </div>
+    </div>
+  </section>
+  <div id="rocket-conatainer">
+    <div id="terminal">
+      <div></div>
+    </div>
+    <div id="roket-loader" class="rocket-loading">
+
+      <div id="center">
+        <div id="spaceship">
+          <div id="window"></div>
+        </div>
+        <div id="tail"></div>
+        <div id="left-wing"></div>
+        <div id="right-wing"></div>
+        <div id="exhaust"></div>
+        <div id="tail"></div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- Premium Modal -->
+
+<div id="premiumModal" class="premium-modal">
+  <div class="premium-modal-content">
+      
+      <img id="premiumImage" src="./assets/premium.png" alt="">
+      <h2>Upgrade To Premium </h2>
+      <p>Unlock all features and enjoy an enhanced experience with our premium membership.</p>
+      <button id="subscribeBtn">Subscribe Now</button>
+      <span class="close">Keep using free plan</span>
+  </div>
+  </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal-reg">
+      <div class="modal-content">
+
+        <p>Game Speed optimized</p>
+      </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="errorModal" class="modal-reg">
+      <div class="modal-content-reg">
+
+        <p></p>
+      </div>
+    </div>
+    <script src="../scripts/gameScript.js"></script>
+    <script src="../scripts/premiumModal.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>PC Tweaks | Registration</title>
+  </head>
+  <body>
+    <div class="title-bar full-width">
+      <div class="title-left-reg">
+        <a href="#">
+          <img src="../assets/TWEAKS.webp" alt="back" />
+        </a>
+      </div>
+
+      <div class="title-right">
+        <button onclick="openCustomerSupport()">
+          <img src="../assets/support.png" alt="" />
+        </button>
+        <button onclick="minimizeWindow()">
+          <img src="../assets/minus.png" alt="" />
+        </button>
+        <button onclick="closeWindow()">
+          <img src="../assets/cross.png" alt="" />
+        </button>
+      </div>
+    </div>
+
+    <div class="login-box">
+      <form
+        id="licenseValidationForm"
+        onsubmit="validateLicense(); return false;"
+      >
+        <p>add your license key</p>
+        <div class="user-box">
+          <input type="text" name="" id="licenseKeyInput" required />
+          <label>license Key</label>
+        </div>
+        <center>
+          <button type="submit">
+            Apply
+            <span></span>
+          </button>
+        </center>
+      </form>
+    </div>
+    <div class="reg-link">
+      <button onclick="openDiscord()">
+        <img src="../assets/discord.png" alt="" />
+      </button>
+    </div>
+    <div id="rocket-conatainer" >
+      <div id="roket-loader" class="rocket-loading r-scale registration-rocket">
+        
+        <div id="center">
+          <div id="spaceship">
+            <div id="window"></div>
+          </div>
+          <div id="tail"></div>
+          <div id="left-wing"></div>
+          <div id="right-wing"></div>
+          <div id="exhaust"></div>
+          <div id="tail"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Success Modal -->
+    <div id="successModal" class="modal-reg">
+      <div class="modal-content">
+        
+        <p>License key is valid.</p>
+      </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="errorModal" class="modal-reg">
+      <div class="modal-content-reg">
+        
+        <p>Invalid license key. Please try again later.</p>
+      </div>
+    </div>
+    <!-- Rocket -->
+    
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"
+      integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../scripts/userValidation.js"></script>
+  </body>
+</html>

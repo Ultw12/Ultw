@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>PC Tweaks</title>
+  </head>
+
+  <body>
+    <section>
+      <div class="sidebar">
+        <div class="item">
+          <div class="logo-container">
+            <img src="../assets/TWEAKS.webp" alt="" />
+            <span>Ultimate Tweaks</span>
+            <p class="app-type">beta</p>
+          </div>
+          <div class="links">
+            <a href="../index.html">
+              <img src="../assets/home.png" alt="home-page" /><span>home</span>
+            </a>
+            <a href="../pages/games.html">
+              <img src="../assets/game.png" alt="home-page" /><span>Games</span>
+            </a>
+            <a href="#" class="active">
+              <img src="../assets/restore.png" alt="home-page" /><span
+                >Backup</span
+              >
+            </a>
+            <a href="../pages/rigs.html">
+              <img src="../assets/pc.png" alt="home-page" /><span>my rig</span>
+            </a>
+            <a href="#" id="openModalBtn1">
+              <img src="../assets/speed.png" alt="home-page" /><span
+                >FPS Boost</span
+              >
+              <span class="premium-tag">premium</span>
+            </a>
+            <a href="#" id="openModalBtn2">
+              <img src="../assets/ping.png" alt="home-page" /><span
+                >Ping Boost</span
+              >
+              <span class="premium-tag">premium</span>
+            </a>
+            <a href="#" id="openModalBtn3">
+              <img src="../assets/delay.png" alt="home-page" /><span
+                >Zero Delay</span
+              >
+              <span class="premium-tag">premium</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="discord">
+          <a onclick="openDiscord()">
+            <img src="../assets/discord.png" alt="discord" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="window-left-backup">
+      <div class="title-bar">
+        <div class="title-left">
+          <a href="../index.html">
+            <img src="../assets/back.png" alt="back" />
+          </a>
+        </div>
+        <div class="title-right">
+          <button onclick="openCustomerSupport()">
+            <img src="../assets/support.png" alt="" />
+          </button>
+          <button onclick="minimizeWindow()">
+            <img src="../assets/minus.png" alt="" />
+          </button>
+          <button onclick="closeWindow()">
+            <img src="../assets/cross.png" alt="" />
+          </button>
+        </div>
+      </div>
+
+      <div class="main-table-backup">
+        <div class="upper-container">
+          <h1>Backups</h1>
+          <div class="backup-btn">
+            <button onclick="showRestoreNameInput()">
+              Create System Restore
+            </button>
+          </div>
+        </div>
+        <center>
+          <div id="restoreNameInputContainer" style="opacity: 0">
+            <input
+              required
+              type="text"
+              id="restoreNameInput"
+              placeholder="Enter restore point name"
+            />
+            <button onclick="createRestorePoint()">Create</button>
+          </div>
+          <span id="restoreNameError" style="color: red; display: none"
+            >Please enter a restore point name.</span
+          >
+        </center>
+
+        <div class="history-container" id="historyContainer"></div>
+      </div>
+      <div id="rocket-conatainer">
+        <div id="roket-loader" class="rocket-loading r-scale">
+          <h1 class="rocket-text">Creating Restore Point</h1>
+          <div id="center">
+            <div id="spaceship">
+              <div id="window"></div>
+            </div>
+            <div id="tail"></div>
+            <div id="left-wing"></div>
+            <div id="right-wing"></div>
+            <div id="exhaust"></div>
+            <div id="tail"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Premium Modal -->
+
+<div id="premiumModal" class="premium-modal">
+  <div class="premium-modal-content">
+      
+      <img id="premiumImage" src="./assets/premium.png" alt="">
+      <h2>Upgrade To Premium </h2>
+      <p>Unlock all features and enjoy an enhanced experience with our premium membership.</p>
+      <button id="subscribeBtn">Subscribe Now</button>
+      <span class="close">Keep using free plan</span>
+  </div>
+  </div>
+    <script src="../scripts/restore.js"></script>
+    <script src="../scripts/premiumModal.js"></script>
+  </body>
+</html>
